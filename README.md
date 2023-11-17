@@ -41,30 +41,14 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-strided-special-trunc
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var trunc = require( '@stdlib/math-strided-special-trunc' );
+import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@deno/mod.js';
 ```
 
 #### trunc( N, dtypeX, x, strideX, dtypeY, y, strideY )
@@ -72,7 +56,7 @@ var trunc = require( '@stdlib/math-strided-special-trunc' );
 Rounds each element in a strided array `x` toward zero and assigns the results to elements in a strided array `y`.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ 1.1, 2.5, -3.5, 4.0, -5.9 ] );
 
@@ -94,7 +78,7 @@ The function accepts the following arguments:
 The `N` and `stride` parameters determine which elements in `x` and `y` are accessed at runtime. For example, to index every other value in `x` and the first `N` elements of `y` in reverse order,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ 1.1, 2.5, -3.5, 4.0, -5.9, 6.4 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -106,7 +90,7 @@ trunc( 3, 'float64', x, 2, 'float64', y, -1 );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Initial arrays...
 var x0 = new Float64Array( [ 1.1, 2.5, -3.5, 4.0, -5.9, 6.4 ] );
@@ -125,7 +109,7 @@ trunc( 3, 'float64', x1, -2, 'float64', y1, 1 );
 Rounds each element in a strided array `x` toward zero and assigns the results to elements in a strided array `y` using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ 1.1, 2.5, -3.5, 4.0, -5.9 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -142,7 +126,7 @@ The function accepts the following additional arguments:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to index every other value in `x` starting from the second value and to index the last `N` elements in `y`,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ 1.1, 2.5, -3.5, 4.0, -5.9, 6.4 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -168,11 +152,11 @@ trunc.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var uniform = require( '@stdlib/random-base-uniform' ).factory;
-var filledarray = require( '@stdlib/array-filled' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var dtypes = require( '@stdlib/array-typed-real-float-dtypes' );
-var trunc = require( '@stdlib/math-strided-special-trunc' );
+var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
+import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
+import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed-real-float-dtypes@deno/mod.js';
+import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@deno/mod.js';
 
 var dt;
 var x;
@@ -223,7 +207,7 @@ for ( i = 0; i < dt.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -285,17 +269,17 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes
+[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/math/strided/special/ceil]: https://github.com/stdlib-js/math-strided-special-ceil
+[@stdlib/math/strided/special/ceil]: https://github.com/stdlib-js/math-strided-special-ceil/tree/deno
 
-[@stdlib/math/strided/special/dtrunc]: https://github.com/stdlib-js/math-strided-special-dtrunc
+[@stdlib/math/strided/special/dtrunc]: https://github.com/stdlib-js/math-strided-special-dtrunc/tree/deno
 
-[@stdlib/math/strided/special/floor]: https://github.com/stdlib-js/math-strided-special-floor
+[@stdlib/math/strided/special/floor]: https://github.com/stdlib-js/math-strided-special-floor/tree/deno
 
-[@stdlib/math/strided/special/strunc]: https://github.com/stdlib-js/math-strided-special-strunc
+[@stdlib/math/strided/special/strunc]: https://github.com/stdlib-js/math-strided-special-strunc/tree/deno
 
 <!-- </related-links> -->
 
