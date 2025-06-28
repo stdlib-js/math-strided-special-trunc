@@ -41,9 +41,9 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/math-base-special-identity": "^0.2.2",
     "@stdlib/math-base-special-trunc": "^0.2.2",
     "@stdlib/math-base-special-truncf": "^0.2.2",
+    "@stdlib/number-float64-base-identity": "github:stdlib-js/number-float64-base-identity#main",
     "@stdlib/strided-base-dtype-resolve-enum": "^0.2.2",
     "@stdlib/strided-base-function-object": "^0.2.2",
     "@stdlib/strided-base-meta-data-props": "^0.2.2",
