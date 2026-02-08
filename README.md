@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@deno/mod.js';
+import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@v0.2.3-deno/mod.js';
 ```
 
 #### trunc( N, dtypeX, x, strideX, dtypeY, y, strideY )
@@ -156,7 +156,7 @@ var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-unifor
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed-real-float-dtypes@deno/mod.js';
-import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@deno/mod.js';
+import trunc from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-trunc@v0.2.3-deno/mod.js';
 
 var dt;
 var x;
